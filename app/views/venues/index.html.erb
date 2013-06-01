@@ -1,24 +1,13 @@
-<h1>MoSo Venue Status</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Count</th>
-    <th>Capacity</th>
-    <th>Notification</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @venues.each do |venue| %>
-  <tr>
-    <td><%= venue.name %></td>
-    <td><%= venue.count %></td>
-    <td><%= venue.capacity %></td>
-    <td><%= venue.notification %></td>
-  </tr>
+<div class = "row">
+
+    <div class="name" ><%= venue.name %></div>
+    <div class="count" ><%= venue.count %></div>
+    <div class="capacity" ><%= venue.percentfull %>% full</div>
+    <div class="notification" ><%= venue.notification %></div>
+</div>
+
 <% end %>
-</table>
+
 
 <br />

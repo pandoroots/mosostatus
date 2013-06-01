@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Status</title>
+  <title>MoSo Status</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<%= yield %>
+		</div>
+	</div>
+</div>
 </body>
 </html>

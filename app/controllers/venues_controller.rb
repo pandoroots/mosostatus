@@ -1,6 +1,8 @@
 class VenuesController < ApplicationController
   # GET /venues
   # GET /venues.json
+
+
   def index
     @venues = Venue.all
 
@@ -24,6 +26,7 @@ class VenuesController < ApplicationController
   # GET /venues/new
   # GET /venues/new.json
   def new
+
     @venue = Venue.new
 
     respond_to do |format|

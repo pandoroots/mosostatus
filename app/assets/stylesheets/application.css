@@ -11,3 +11,54 @@
  *= require_self
  *= require_tree .
  */
+body, html, .container-fluid{
+	background-color: #e93437;
+}
+
+.statusheader {
+
+	font-size: 20px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: #FFFFFF;
+
+}
+.name {
+	font-size: 18px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: #ffcc00;;
+
+}
+
+.count {
+	font-size: 100px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 90%;
+
+
+}
+
+.capacity {
+	font-size: 40px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+
+
+}
+
+.notification{
+	font-size: 32px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 90%;
+
+	margin-bottom: 30px;
+}
