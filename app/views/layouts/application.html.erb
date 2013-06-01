@@ -6,10 +6,20 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+	<body>
+
 <div class="container-fluid">
+
+	 <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+
 	<div class="row-fluid">
 		<div class="span12">
+
+<script>
+
+</script>
+
 			<%= yield %>
 		</div>
 	</div>
