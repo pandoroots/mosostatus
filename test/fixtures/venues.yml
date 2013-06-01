@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  count: 1
+  capacity: 1
+  notification: MyText
+
+two:
+  name: MyString
+  count: 1
+  capacity: 1
+  notification: MyText
