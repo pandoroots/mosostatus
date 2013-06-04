@@ -2,11 +2,10 @@ class VenuesController < ApplicationController
   # GET /venues
   # GET /venues.json
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :index
 
   def index
   
-  if user_signed_in?
 
     @venues = Venue.all
 
@@ -14,7 +13,6 @@ class VenuesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @venues }
     end
-  end
 
   end
 

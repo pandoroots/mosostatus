@@ -6,7 +6,9 @@
     <div class="count" ><%= venue.count %></div>
     <div class="capacity" ><%= venue.percentfull %>% full</div>
     <div class="notification" ><%= venue.notification %></div>
+   	<% if user_signed_in? %>
     <div class="edit"> <%= link_to 'Edit', edit_venue_path(venue) %></div>
+    <% end %>
 </div>
 <% end %>
 
