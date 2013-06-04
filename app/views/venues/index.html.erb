@@ -2,7 +2,7 @@
 <% @venues.each do |venue| %>
 <div class = "row">
 
-    <div class="name" ><%= venue.name %></div>
+    <div class="name venue_title" ><%= venue.name %></div>
     <div class="count" ><%= venue.count %></div>
     <div class="capacity" ><%= venue.percentfull %>% full</div>
     <div class="notification" ><%= venue.notification %></div>
