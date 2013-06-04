@@ -5,10 +5,8 @@ class VenuesController < ApplicationController
   before_filter :authenticate_user!, :except => :index
 
   def index
-  
-
     @venues = Venue.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @venues }
