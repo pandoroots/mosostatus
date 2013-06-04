@@ -12,21 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+   <div class="venue_title"> <%= @venue.name %></div>
   </div>
  
   <div class="field">
     <%= f.label :count %><br />
     <%= f.number_field :count %>
   </div>
-  <div class="field">
-    <%= f.label :capacity %><br />
-    <%= f.number_field :capacity %>
-  </div>
+
   <div class="field">
     <%= f.label :notification %><br />
     <%= f.text_area :notification %>
+  </div>
+    <div class="field">
+    <%= @venue.capacity %><br />
   </div>
   <div class="actions">
     <%= f.submit %>

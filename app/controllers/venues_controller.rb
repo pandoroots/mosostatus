@@ -2,8 +2,12 @@ class VenuesController < ApplicationController
   # GET /venues
   # GET /venues.json
 
+  before_filter :authenticate_user!
 
   def index
+  
+  if user_signed_in?
+
     @venues = Venue.all
 
     respond_to do |format|
@@ -12,14 +16,20 @@ class VenuesController < ApplicationController
     end
   end
 
+  end
+
   # GET /venues/1
   # GET /venues/1.json
   def show
+
+    if user_signed_in?
+
     @venue = Venue.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @venue }
+    end
     end
   end
 
@@ -27,22 +37,32 @@ class VenuesController < ApplicationController
   # GET /venues/new.json
   def new
 
+  if user_signed_in?
+
     @venue = Venue.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @venue }
     end
+
+  end
   end
 
   # GET /venues/1/edit
   def edit
+
+  if user_signed_in?
     @venue = Venue.find(params[:id])
+  end
   end
 
   # POST /venues
   # POST /venues.json
   def create
+
+  if user_signed_in?
+
     @venue = Venue.new(params[:venue])
 
     respond_to do |format|
@@ -55,10 +75,14 @@ class VenuesController < ApplicationController
       end
     end
   end
+  end
 
   # PUT /venues/1
   # PUT /venues/1.json
   def update
+
+    if user_signed_in?
+
     @venue = Venue.find(params[:id])
 
     respond_to do |format|
@@ -70,11 +94,14 @@ class VenuesController < ApplicationController
         format.json { render json: @venue.errors, status: :unprocessable_entity }
       end
     end
+    end
   end
 
   # DELETE /venues/1
   # DELETE /venues/1.json
   def destroy
+    if user_signed_in?
+
     @venue = Venue.find(params[:id])
     @venue.destroy
 
@@ -82,5 +109,6 @@ class VenuesController < ApplicationController
       format.html { redirect_to venues_url }
       format.json { head :no_content }
     end
+  end
   end
 end

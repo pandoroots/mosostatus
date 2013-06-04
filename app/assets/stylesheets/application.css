@@ -11,9 +11,17 @@
  *= require_self
  *= require_tree .
  */
-body, html, .container-fluid{
-	background-color: #e93437;
+
+.venue_title{
+	margin-top:60px;
+	font-size: 20px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: ##e93437;
 }
+
+
 
 .statusheader {
 
@@ -21,7 +29,7 @@ body, html, .container-fluid{
 	font-family: "franklin-gothic-urw", sans-serif;
 	font-style: normal;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: ##e93437;
 
 }
 .name {
@@ -38,7 +46,7 @@ body, html, .container-fluid{
 	font-family: "franklin-gothic-urw", sans-serif;
 	font-style: normal;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: #e93437;
 	line-height: 90%;
 
 
@@ -60,5 +68,14 @@ body, html, .container-fluid{
 	font-weight: 500;
 	line-height: 90%;
 
+}
+
+.edit{
+	font-size: 18px;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: #ffcc00;;
 	margin-bottom: 30px;
+
 }
