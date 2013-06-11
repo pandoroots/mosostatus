@@ -6,12 +6,12 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.all
-    
+    venues_json = @venues.to_json
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @venues }
+      #format.html # index.html.erb
+      #format.json { render json: @venues }
+      format.json { render :json => venues_json, :callback => params[:callback]}
     end
-
   end
 
   # GET /venues/1
