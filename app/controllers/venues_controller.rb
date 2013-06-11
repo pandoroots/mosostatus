@@ -1,16 +1,21 @@
 class VenuesController < ApplicationController
   # GET /venues
   # GET /venues.json
-
+  # GET venues.json?callback=parseVenue
   before_filter :authenticate_user!, :except => :index
 
   def index
     @venues = Venue.all
-    venues_json = @venues.to_json
-    respond_to do |format|
-      #format.html # index.html.erb
-      #format.json { render json: @venues }
-      format.json { render :json => venues_json, :callback => params[:callback]}
+    if( params.has_key?(:callback) )
+      venues_json = @venues.to_json
+      respond_to do |format|
+        format.json { render :json => venues_json, :callback => params[:callback]}
+      end
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @venues }
+      end
     end
   end
 
